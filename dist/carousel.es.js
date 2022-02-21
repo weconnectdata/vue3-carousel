@@ -562,8 +562,7 @@ const Icon = (props) => {
 Icon.props = { name: String, title: String };
 
 const Navigation = (props, { slots, attrs }) => {
-    // @ts-ignore
-    const { next: slotNext, prev: slotPrev } = slots || {};
+    const { next: slotNext, prev: slotPrev } = slots;
     const config = inject('config', reactive(Object.assign({}, defaultConfigs)));
     const maxSlide = inject('maxSlide', ref(1));
     const minSlide = inject('minSlide', ref(1));

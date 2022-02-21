@@ -566,8 +566,7 @@
   Icon.props = { name: String, title: String };
 
   const Navigation = (props, { slots, attrs }) => {
-      // @ts-ignore
-      const { next: slotNext, prev: slotPrev } = slots || {};
+      const { next: slotNext, prev: slotPrev } = slots;
       const config = vue.inject('config', vue.reactive(Object.assign({}, defaultConfigs)));
       const maxSlide = vue.inject('maxSlide', vue.ref(1));
       const minSlide = vue.inject('minSlide', vue.ref(1));
